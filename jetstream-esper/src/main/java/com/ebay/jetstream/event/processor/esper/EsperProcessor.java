@@ -541,9 +541,11 @@ public class EsperProcessor extends AbstractQueuedEventProcessor {
 						}
 						epStmt = m_epAdmin
 								.create(model, null, annotationInfo);
-						if(m_esperEventListener != null)
-							epStmt.addListener(m_esperEventListener);
+						//if(m_esperEventListener != null)
+						//	epStmt.addListener(m_esperEventListener);
 					}
+					if(m_esperEventListener != null)
+							epStmt.addListener(m_esperEventListener);
 
 				}
 				
